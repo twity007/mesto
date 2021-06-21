@@ -1,7 +1,7 @@
 .element__info {
-color: black;
+    color: black;
     border-radius: 10px;
-        display: flex;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin: 0 auto;

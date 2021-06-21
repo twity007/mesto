@@ -1,0 +1,17 @@
+.popup__input-name {
+    border-bottom: 1px solid #000000;
+    border-right: 0;
+    border-left: 0;
+    border-top: 0;
+    width: 358px;
+    margin-top: 30px;
+}
+.popup__input-name {
+    margin-top: 54px;
+}
+
+@media screen and (max-width: 500px) {
+    .popup__input-name {
+        max-width: 238px;
+    }
+}
