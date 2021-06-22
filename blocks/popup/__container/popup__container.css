@@ -4,20 +4,12 @@
     width: 100%;
     max-width: 430px;
     border-radius: 10px;
-    position: absolute;
+    position: relative;
 }
 
-input[type="submit"] {
-    margin-top: 48px;
-    width: 358px;
-    height: 50px;
-    background: #000000;
-    border-radius: 2px;
-    color: white;
-}
 
 @media screen and (max-width: 500px) {
     .popup__container {
-max-width: 282px;
+        max-width: 282px;
     }
 }
