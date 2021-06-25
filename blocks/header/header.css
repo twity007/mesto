@@ -3,10 +3,10 @@
     width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 0;
+    justify-content: flex-start;
+    margin: 0 auto;
     border-bottom: 1px solid rgba(84, 84, 84, 0.7);
-    background: #000000;
+     padding: 28px 0 32px 8px;
     color: white;
     font-family: "Inter", "Arial ", sans-serif;
 }
