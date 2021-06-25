@@ -5,3 +5,15 @@
     height: 24px;
     border: 0;
 }
+
+.profile__edit-button:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+   .profile__edit-button {
+      background: transparent url("../../../images/edit-button-small.svg");
+      background-repeat: no-repeat;
+    }
+}

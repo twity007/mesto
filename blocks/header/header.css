@@ -1,9 +1,12 @@
 .header {
     display: flex;
+    width: 100%;
     flex-direction: row;
-    max-width: 880px;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 0 auto;
-    border-bottom: 1px solid #545454;
+    margin: 0;
+    border-bottom: 1px solid rgba(84, 84, 84, 0.7);
+    background: #000000;
+    color: white;
+    font-family: "Inter", "Arial ", sans-serif;
 }

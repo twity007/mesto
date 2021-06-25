@@ -1,10 +1,20 @@
 .footer {
-    font-family: "Inter", sans-serif;
+    font-family: "Inter", "Arial ", sans-serif;
     color: #545454;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 22px;
+    padding: 67px 0;
+    background: #000000;
+    display: flex;
     max-width: 880px;
-    padding: 67px;
+    justify-content: flex-start;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 900px) {
+    .footer {
+     margin: auto 19px;
+    }
 }
