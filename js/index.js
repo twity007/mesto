@@ -1,35 +1,36 @@
 const popupElement = document.querySelector(".popup");
 const popupClose = document.querySelector(".popup__close");
 const popupOpen = document.querySelector(".profile__edit-button");
-let formElement = document.querySelector(".popup__form");
-
-
-
+const formElement = document.querySelector(".popup__form");
+const nameInput = formElement.querySelector(".popup__input_type_name");
+const jobInput = formElement.querySelector(".popup__input_type_job");
+const title = document.querySelector(".profile__title");
+const subtitle = document.querySelector(".profile__subtitle");
 
 const openPopup = function () {
     popupElement.classList.add("popup_opened");
+
+   nameInput.value = title.textContent;
+    jobInput.value = subtitle.textContent;
+
 };
 
-const closePopup = function () {
-    popupElement.classList.remove("popup_opened");
+const closePopup = function (evt) {
+        evt.preventDefault();
+        popupElement.classList.remove("popup_opened");
 };
-
 
 // Обработчик «отправки» формы, хотя пока
 // она никуда отправляться не будет
+
 function formSubmitHandler(evt) {
     evt.preventDefault();
 
-    const nameInput = formElement.querySelector(".popup__input_type_name").value;
-    const jobInput = formElement.querySelector(".popup__input_type_job").value;
+    title.textContent = nameInput.value;
+    subtitle.textContent = jobInput.value;
 
-    let title = document.querySelector(".profile__title");
-    let subtitle = document.querySelector(".profile__subtitle");
+    closePopup(evt);
 
-   title.textContent = nameInput;
-   subtitle.textContent = jobInput;
-
-    closePopup();
 }
 
 // Прикрепляем обработчик к форме:
