@@ -5,9 +5,9 @@ const popupPreview = document.querySelector(".popup_js_preview");
 
 
 
-const popupCloseAdd = document.querySelector(".popup__close-add_js");
-const popupClosePreview = document.querySelector(".popup__close-preview_js");
-const popupCloseEdit = document.querySelector(".popup__close-edit_js");
+const popupCloseAdd = document.querySelector(".popup__close_js_add");
+const popupClosePreview = document.querySelector(".popup__close_js_preview");
+const popupCloseEdit = document.querySelector(".popup__close_js_edit");
 
 
 const editButton = document.querySelector(".profile__edit-button");
