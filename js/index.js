@@ -26,7 +26,7 @@ const elementLike = document.querySelector('.element__like');
 //const elementLikeActive = document.querySelector('.element__like_active');
 
 
-const formElement = document.querySelector(".popup__form");
+const formElement = document.querySelector(".popup__form-content");
 const formElementAdd = document.querySelector('.popup__form-add');
 
 const nameInput = formElement.querySelector(".popup__input_type_name");
