@@ -6,8 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Место</title>
    </head>
-   <body>
-      <div class="page">
+   <body class="page">
        <header class="header">
            <img class="header__logo" src="images/Vector.svg" alt="логотип">
          </header>
@@ -39,7 +38,6 @@
           <footer class="footer">
             <p class="footer__copyright">© 2020 Mesto Russia</p>
          </footer>
-      </div>
       
       <div class="popup popup_js_edit">
             <div class="popup__content">
@@ -47,8 +45,8 @@
 
                <form class="popup__form popup__form-edit" name="popup__form">
                    <h2 class="popup__title">Редактировать профиль</h2>
-                  <input type="text" class="popup__input popup__input_type_name" id="name" name="personName" placeholder="Жак-Ив Кусто" value="" />
-                  <input type="text" class="popup__input popup__input_type_job" id="job" name="personAbout" placeholder="Исследователь океана" value="" />
+                  <input type="text" class="popup__input popup__input_type_name" id="name" name="personName" placeholder="имя" value="" />
+                  <input type="text" class="popup__input popup__input_type_job" id="job" name="personAbout" placeholder="профессиональная деятельность" value="" />
                   <input type="submit" class="popup__save-button" name="saveButton" value="Сохранить" />
                </form>
             </div>
@@ -62,7 +60,7 @@
                <h2 class="popup__title">Новое место</h2>
 
                   <input type="text" class="popup__input popup__input_type_title" name="title" placeholder="Название" />
-                  <input type="text" class="popup__input popup__input_type_link"  name="link" placeholder="Ссылка на картинку" />
+                  <input type="url" class="popup__input popup__input_type_link"  name="link" placeholder="Ссылка на картинку" />
                   <input type="submit" class="popup__save-button" name="saveButton" value="Сохранить" />
                </form>
             </div>
@@ -80,12 +78,11 @@
         </div>
 
       </div>
-    </div>
 
   <template id="element__template">
       <li class="elements__template">
 
-        <img class="element__img" alt=""/ src>
+        <img class="element__img" alt="" src=""/>
         <button type="button" class="element__delete"></button>
          <div class="element__info">
           <h2 class="element__title"></h2>

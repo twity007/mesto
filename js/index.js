@@ -18,12 +18,17 @@ const addButton = document.querySelector(".profile__add-button");
 const title = document.querySelector(".profile__title");
 const subtitle = document.querySelector(".profile__subtitle");
 
-const elementsContainer = document.querySelector("#element__template");
-const elementsList= document.querySelector(".elements__list");
-const element =document.querySelector('.elements__template');
+const elemTemplate = document.querySelector('.elements__template');
+const elementsList = document.querySelector(".elements__list");
 
-const elementLike = document.querySelector('.element__like');
-//const elementLikeActive = document.querySelector('.element__like_active');
+  const elementLike = document.querySelector(".element__like");
+
+// const elemInfo = document.querySelector('.element__info');
+
+// console.log(elementLike);
+//      const elementImg = document.querySelector('.element__img');
+//          const elementTitle = document.querySelector('.element__title');
+
 
 
 const formElement = document.querySelector(".popup__form");
@@ -43,17 +48,48 @@ function renderElement(array) {
 renderElement(initialCards);
 
 function createElement(element) {
+      const itemTemplateContent = document.querySelector('#element__template').content; 
 
-    const listElements = document.querySelector('.elements__list');
-    const itemTemplateContent = document.querySelector('#element__template').content;
-    const itemsElement = itemTemplateContent.cloneNode(true);
-    itemsElement.querySelector('.element__img').src = element.link;
-    itemsElement.querySelector('.element__title').textContent = element.name;
-    itemsElement.querySelector('.element__img').alt = element.name;
-
+  const itemsElement = itemTemplateContent.cloneNode(true); 
+const elementImg = itemsElement.querySelector('.element__img');
+        const elementTitle = itemsElement.querySelector('.element__title');
+  const listElements = document.querySelector('.elements__list'); 
+   
+  
+    elementImg.src = element.link; 
+    elementTitle.textContent = element.name; 
+    elementImg.alt = element.name; 
+ 
         return itemsElement;
 
+
 };
+
+function openPopupPreview(event) {
+  const elem = event.target;
+   const previewImg = document.querySelector(".preview__img");
+    const previewText = document.querySelector(".preview__caption");
+
+  if (elem.classList.contains("element__img")) {
+   
+    previewImg.src = elem.src;
+    previewText.textContent = elem.alt;
+
+    openPopup(popupPreview);
+  }
+}
+
+function clickLike(event) {
+  event.target.classList.toggle("element__like_active"); 
+}
+
+
+function deleteElement(event) {
+  if (event.target.classList.contains("element__delete")) {
+    event.target.closest(".elements__template").remove();
+  }
+}
+
 
 function addElement(element) {
 
@@ -85,19 +121,7 @@ function openAddElemPopup() {
   openPopup(popupAdd);
 }
 
-function openPopupPreview(event) {
-  const elem = event.target;
 
-  if (elem.classList.contains("element__img")) {
-    const previewImg = document.querySelector(".preview__img");
-    const previewText = document.querySelector(".preview__caption");
-
-    previewImg.src = elem.src;
-    previewText.textContent = elem.alt;
-
-    openPopup(popupPreview);
-  }
-}
 
 
 function closePopupPreview() {
@@ -115,17 +139,6 @@ function closePopupEdit() {
 
 
 
-function clickLike(event) {
-  if (event.target.classList.contains("element__like")) {
-      event.target.classList.toggle("element__like_active");
-  }
-}
-
-function deleteElement(event) {
-  if (event.target.classList.contains("element__delete")) {
-    event.target.closest(".elements__template").remove();
-  }
-}
 
 
 
@@ -172,7 +185,6 @@ popupCloseEdit.addEventListener("click", closePopupEdit);
 
 addButton.addEventListener("click", openAddElemPopup);
 
-
 elementsList.addEventListener("click", openPopupPreview);
-elementsList.addEventListener("click", clickLike);
 elementsList.addEventListener("click", deleteElement);
+elementsList.addEventListener("click", clickLike);
